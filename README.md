@@ -5,9 +5,8 @@ Trabajo Práctico Especial para la materia Web 2 de la Tecnicatura Universitaria
 
 ## Tema
 
-Creamos una base de datos, modelamos la relación 1 a N: Aseguradora-Siniestro, con el fin de 
-que los usuarios puedan compartir información sobre sus siniestros, 
-permitiendo al perito tener información y registro de los mismos.
+Creamos una base de datos, modelando la relación (1 a N), Aseguradora-Siniestro, con el fin de facilitar a los usuarios el registro con la información sobre sus siniestros.
+También permitiendo al perito tener acceso detallado a los mismos para la gestión y evaluación de cada caso.
 
 
 ## Diagrama
