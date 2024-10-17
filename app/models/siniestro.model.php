@@ -14,12 +14,7 @@ class SiniestroModel{
         return $siniestros;
     }
 
-    public function getAseguradoras(){
-        $query = $this -> db->prepare('SELECT * FROM aseguradora');
-        $query->execute();
-        $aseguradoras = $query -> fetchAll(PDO::FETCH_OBJ);
-        return $aseguradoras;
-    }
+
 
 
 }

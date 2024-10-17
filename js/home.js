@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     if (accordion) {
         accordion.addEventListener('click', function(){
-         window.location.href = './ruteo.php?action=aseguradora';
+         window.location.href = './ruteo.php?action=siniestro';
 
         });
     }

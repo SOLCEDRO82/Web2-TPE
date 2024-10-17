@@ -12,9 +12,7 @@ class SiniestroController{
 
     }
 
-    public function getHome(){
-        $this -> view -> showHome();
-    }
+
 
     public function siniestros(){
         $siniestros = $this->model->getSiniestros();

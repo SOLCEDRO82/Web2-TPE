@@ -4,13 +4,7 @@
 <?php
 class SiniestroView {
 
-    public function showHome(){
-        echo "<div class='home-buttons'>
-                <button id='siniestros'>Siniestros</button>
-                <button id='aseguradoras'>Aseguradoras</button>
-              </div>";
-              
-    }
+
     
     public function showSiniestros($siniestros) {
         echo "<h1>Siniestros</h1>
@@ -38,9 +32,6 @@ class SiniestroView {
     }
     
 }
-
-   
-
 ?>
 
 <script src="./js/home.js"></script>
