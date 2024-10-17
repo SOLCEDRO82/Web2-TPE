@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./style/style.css">
 
 <?php
-class View {
+class SiniestroView {
 
     public function showHome(){
         echo "<div class='home-buttons'>
@@ -26,6 +26,8 @@ class View {
                 <div class='accordion-content' id='accordion-content-$key'>
                     <p>ID del Siniestro: $siniestro->ID_Siniestro</p>
                     <p>Descripción: $siniestro->Tipo_Siniestro</p>
+                    <p>ID de la Aseguradora: $siniestro->ID_Aseguradora</p>
+
                 </div>";
         }
         
@@ -35,20 +37,9 @@ class View {
               </div>";
     }
     
-    public function showAseguradoras($aseguradoras){
-
-        echo "<h1>Aseguradoras</h1>
-            <ul class='list'>";
-        foreach ($aseguradoras as $aseguradora) {
-            echo "<li class='list-liA'><span>$aseguradora->Nombre</span> - <span>Dirección $aseguradora->Direccion</span></li>";
-        }
-        echo "</ul>";
-        echo "<div class = btn-back>
-        <button id='back'>Atrás</button>
-        </div>";
-
-    }
 }
+
+   
 
 ?>
 

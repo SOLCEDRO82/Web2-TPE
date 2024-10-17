@@ -1,6 +1,6 @@
 <?php
 require_once "./app/controllers/siniestro.controller.php";
-
+require_once "./app/controllers/aseguradora.controller.php";
 
 // base_url para redirecciones y base tag
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -30,15 +30,12 @@ switch($params[0]){
         }
         break;
     case "aseguradoras":
-        $controller = new SiniestroController();
+        $controller = new AseguradoraController();
         $controller -> aseguradoras();
         break;
     case "aseguradora":
-        if(isset($params[1])){
-            showAseguradoraId($params[1]);
-        }else{
-            showAseguradoras();
-        }
+        $controller = new AseguradoraController();
+        $controller->aseguradora($params[1]);
         break;
     default:
         echo "No se encuentra lo ingresado";

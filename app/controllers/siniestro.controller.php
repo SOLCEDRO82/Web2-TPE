@@ -1,6 +1,6 @@
 <?php
 require_once "./app/models/siniestro.model.php";
-require_once "./app/views/view.php";
+require_once "./app/views/siniestro.view.php";
 
 class SiniestroController{
     private $model;
@@ -8,7 +8,7 @@ class SiniestroController{
 
     public function __construct(){
         $this->model = new SiniestroModel();
-        $this->view = new View();
+        $this->view = new SiniestroView();
 
     }
 
@@ -21,9 +21,8 @@ class SiniestroController{
         return $this -> view -> showSiniestros($siniestros);
     }
 
-    public function aseguradoras(){
-        $aseguradoras = $this->model->getAseguradoras();
-        return $this -> view -> showAseguradoras($aseguradoras);
-    }
+
+
+
      
 }

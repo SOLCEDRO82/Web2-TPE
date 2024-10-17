@@ -19,21 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     if (accordion) {
-        accordion.addEventListener('click', function(event) {
-            if (event.target.classList.contains('accordion-btn')) {
-                const content = event.target.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    // Cerrar otros contenidos abiertos
-                    const allContents = document.querySelectorAll('.accordion-content');
-                    allContents.forEach(c => c.style.display = "none");
-                    content.style.display = "block";
-                }
-            }
+        accordion.addEventListener('click', function(){
+         window.location.href = './ruteo.php?action=aseguradora';
+
         });
     }
         // Comprobar si el botón 'back' existe
+
     if (btnBack) {
         btnBack.addEventListener('click', function() {
             window.location.href = './ruteo.php?action=home';
