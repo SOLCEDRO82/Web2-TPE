@@ -49,7 +49,7 @@ class AuthController {
         } 
         
         else {
-            return $this->view->showLogin('Credenciales incorrectas');
+            return $this->view->showLogin('Credenciales incorrectas, vuelva a intentarlo.');
         }
 
 
