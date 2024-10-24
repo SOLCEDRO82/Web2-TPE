@@ -7,7 +7,6 @@ class SiniestroController{
     private $view;
 
     public function __construct($res){
-    public function __construct($res){
         $this->model = new SiniestroModel();
         $this->view = new SiniestroView($res->user);
     }
