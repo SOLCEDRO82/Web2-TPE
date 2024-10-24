@@ -31,15 +31,12 @@ class AuthController {
         //verificar el usuario
         $user= $this-> model-> getUserByEmail($email);
         
-        error_log("DEBUG: Pass ".$password. " Hasheado ".password_hash($password, PASSWORD_DEFAULT));
-
-
          // pasword_verify es una función que chequea 
         //si la contraseña que nos da el usuario coincide con el hash que tenemos
        
-        if(password_verify($password,$user->password) ){
+        if($user && password_verify($password,$user->password) ){
                 session_start();
-                error_log("DEBUG: entró al if con pass ".$password);
+                //error_log("DEBUG: entró al if con pass ".$password);
      
             //guardo en la sesión el Id del usuario
             $_SESSION['ID_USER'] = $user->id; 
@@ -58,9 +55,9 @@ class AuthController {
         public function logout() {
             session_start(); // busca la cookie
             session_destroy(); // borra la cookie almacenada
-            header('Location: ' . BASE_URL);
+            header('Location: ' . BASE_URL."showlogin");
+            exit();
         }
 
 
     }
-

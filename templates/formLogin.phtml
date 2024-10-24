@@ -1,17 +1,21 @@
 <?php require_once './templates/layout/header.phtml'?>
 <?php if (!empty($error)): ?>
-    <div class="" role="alert">
+    <div class="error" role="alert">
         <?= htmlspecialchars($error) ?>
     </div>
 <?php endif; ?>
+<div class='background-login'>
     <form action='login' method='POST' >
-        <div class=''>
-            <label for='email' class=''  name='email' >Usuario</label>
-            <input type='text' class='' name='email' id='email' required>
-            <label for='password' class='' name='password' >Contraseña
-            <input type='password' class='' name='password' id='password' required>
+        <div class='form-login'>
+            <h1>Iniciar Sección</h1>
+            <p class='p-login'>Ingrese su Usuario y Contraseña para habilitar propiedades de la App</p>
+            <label for='email' class='formLoginLabel' id='email' name='email' >Usuario</label>
+            <input type='text' class='input-formLogin' name='email' id='email' placeholder="Introduce tu usuario" required>
+            <label for='password' class='formLoginLabel' id='password' name='password' >Contraseña</label>
+            <input type='password' class='input-formLogin' name='password' id='password'placeholder="Introduce tu contraseña"  required>
+            <button type='submit'  class='btnLogin'>Login</button>
         </div>
-        <button type='submit' class=''>login</button>
     </form>
+</div>
     
 <?php require_once './templates/layout/footer.phtml'?>

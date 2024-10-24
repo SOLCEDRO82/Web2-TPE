@@ -24,8 +24,6 @@ class SiniestroModel{
 
     }
 
-
-
     public function siniestroaAdd($date, $typeSiniestro, $asegurado, $aseguradoraId){
         $query = $this -> db->prepare('INSERT INTO siniestro (Fecha,Tipo_Siniestro, Asegurado, ID_Aseguradora) VALUES(?,?,?,?)');
         $query -> execute([$date, $typeSiniestro, $asegurado, $aseguradoraId]);
